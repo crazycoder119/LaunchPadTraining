@@ -14,9 +14,9 @@ public class Application {
 				System.out.println(line);
 			}
 		} catch (FileNotFoundException fileNotFoundException) {
-			System.out.println("File not found exception " + fileNotFoundException.toString());
+			System.out.println("File not found exception " + fileNotFoundException);
 		} catch (IOException ioException) {
-			System.out.println("IO exception " + ioException.toString());
+			System.out.println("IO exception " + ioException);
 		}
 	}
 
