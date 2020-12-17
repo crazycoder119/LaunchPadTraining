@@ -20,6 +20,7 @@ public class Payment {
 		}
 
 		if (foreignOrder) {
+			// Add shipping charges and others for foreign orders
 			ForeignOrders foreignOrders = new ForeignOrders();
 			BigDecimal lastAmount = foreignOrders.addShipingCharges(billAmount, sellerID);
 		}

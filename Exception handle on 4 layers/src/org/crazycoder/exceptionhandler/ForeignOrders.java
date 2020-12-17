@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 
 public class ForeignOrders {
 	public BigDecimal addShipingCharges(String billAmount, int sellerID) {
+		// Add shipping charges to last amount according to the order 
 		BigDecimal bill = new BigDecimal(billAmount);
 		BigDecimal interest = new BigDecimal("0");
 		BigDecimal lastAmount = null;
