@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.Stack;
 
 public class Application {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  {
 
 		try {
 			Stack<BigInteger> bigIntegerStack = new Stack<BigInteger>();
