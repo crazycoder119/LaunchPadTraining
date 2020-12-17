@@ -5,9 +5,9 @@ import java.io.InputStreamReader;
 
 public class UserInputReader {
 	public  String readUserInputsFromBufferedReader() throws IOException {
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the number : ");
-		String number = reader.readLine();
+		String number = bufferedReader.readLine();
 		return number;
 	}
 }
