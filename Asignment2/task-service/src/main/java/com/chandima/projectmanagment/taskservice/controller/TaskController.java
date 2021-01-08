@@ -17,6 +17,11 @@ public class TaskController {
     @Autowired
     TaskService taskService;
 
+    @RequestMapping(value = "/getAllTasksByProject/{projectId}", method = RequestMethod.GET)
+    public ResponseEntity<List<Object>> getAllTasksByProjectId(@PathVariable int projectId){
+        return ResponseEntity.ok().body(taskService.getAllTasksByProjectId(projectId));
+    }
+
 
     /**
      * take project object from project server by sending the id
@@ -26,11 +31,6 @@ public class TaskController {
         String baseURL = "http://localhost:9181/services/projectvalidate/"+projectId;
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(baseURL, Project.class);
-    }
-
-    @RequestMapping(value = "/getAllTasksByProject/{projectId}", method = RequestMethod.GET)
-    public ResponseEntity<List<Object>> getAllTasksByProject(@PathVariable int projectId){
-        return ResponseEntity.ok().body(taskService.getAllTasksByProject(getProjectNameValid(projectId).getProjectName()));
     }
 
 

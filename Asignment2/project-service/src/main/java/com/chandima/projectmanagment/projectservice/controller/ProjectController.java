@@ -4,8 +4,10 @@ import com.chandima.projectmanagement.commons.model.Project;
 import com.chandima.projectmanagment.projectservice.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -15,6 +17,17 @@ public class ProjectController {
 
     @Autowired
     ProjectService projectService;
+
+    @RequestMapping(value = "/getalltasksfromprojectName/{projectId}", method = RequestMethod.GET)
+    public ResponseEntity<Object[]>   getTasksByProjectId(@PathVariable int projectId){
+        String baseURL = "http://localhost:9182/services/getAllTasksByProject/"+projectId;
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<Object[]> responseEntity = restTemplate.getForEntity(baseURL, Object[].class);
+        Object[] objects = responseEntity.getBody();
+        MediaType contentType = responseEntity.getHeaders().getContentType();
+        HttpStatus statusCode = responseEntity.getStatusCode();
+        return ResponseEntity.ok().body(objects);
+    }
 
     @RequestMapping(value = "/projectvalidate/{id}", method = RequestMethod.GET)
     public Project getProjectByIdTaskService(@PathVariable int id){

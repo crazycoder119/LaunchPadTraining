@@ -20,5 +20,5 @@ public interface TaskService {
 
     Task deleteTaskById(int id);
 
-    List<Object> getAllTasksByProject(String project);
+    List<Object> getAllTasksByProjectId(int projectId);
 }

@@ -126,27 +126,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "getalltaskbyprojectid",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:9182/services/getAllTasksByProject/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9182",
-					"path": [
-						"services",
-						"getAllTasksByProject",
-						"1"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }

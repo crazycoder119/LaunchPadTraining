@@ -85,7 +85,7 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public List<Object> getAllTasksByProject(String project) {
-        return taskRepository.getAllTasksByProject(project);
+    public List<Object> getAllTasksByProjectId(int projectId) {
+        return taskRepository.getAllTasksByProjectId(projectId);
     }
 }
