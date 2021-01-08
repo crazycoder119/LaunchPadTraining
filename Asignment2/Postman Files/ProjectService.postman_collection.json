@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "4a53caa6-fdf9-40a1-9baa-8eca7f3549b8",
+		"name": "ProjectService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addproject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": \"5\",\r\n\t\"projectName\": \"project3\",\r\n\t\"projectManager\":\"manager1\",\r\n\t\"startDate\":\"2020-01-01\",\r\n\t\"endDate\":\"2020-01-30\",\r\n\t\"status\":\"null\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9181/services/addproject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"services",
+						"addproject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateproject",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": \"2\",\r\n\t\"projectName\": \"project2\",\r\n\t\"projectManager\":\"manager1\",\r\n\t\"startDate\":\"2020-01-01\",\r\n\t\"endDate\":\"2020-01-30\",\r\n\t\"status\":\"started dev\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9181/services/updateproject/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"services",
+						"updateproject",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addsameprojecttwise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": \"1\",\r\n\t\"projectName\": \"project2\",\r\n\t\"projectManager\":\"manager1\",\r\n\t\"startDate\":\"2020-01-01\",\r\n\t\"endDate\":\"2020-01-30\",\r\n\t\"status\":\"null\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9181/services/addproject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"services",
+						"addproject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteproject",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9181/services/deleteproject/7/admins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"services",
+						"deleteproject",
+						"7",
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallproject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9181/services/projects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"services",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallprojectbyid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9181/services/project/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9181",
+					"path": [
+						"services",
+						"project",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

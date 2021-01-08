@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "d794a65f-7ee5-4047-bdc0-51a376804b6d",
+		"name": "TaskService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addtask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\":\"5\",\r\n\t\"projectName\": \"project2\",\r\n\t\"taskName\":\"task1\",\r\n\t\"asignedDate\":\"2020-01-02\",\r\n\t\"completedDate\":\"null\",\r\n\t\"developer\":\"devperson1\",\r\n\t\"qa\":\"qaperson1\",\r\n\t\"state\":\"dev\",\r\n\t\"comments\":\"on dev branch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9182/services/addtask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						"services",
+						"addtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getalltasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9182/services/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						"services",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gettaskbyid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9182/services/task/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						"services",
+						"task",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatetaskbyid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\":\"4\",\r\n\t\"projectName\": \"project2\",\r\n\t\"taskName\":\"task2\",\r\n\t\"asignedDate\":\"2020-01-02\",\r\n\t\"completedDate\":\"null\",\r\n\t\"developer\":\"devperson1\",\r\n\t\"qa\":\"qaperson1\",\r\n\t\"state\":\"qa\",\r\n\t\"comments\":\"on dev branch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9182/services/updatetask/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						"services",
+						"updatetask",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletetaskbyid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9182/services/deletetask/4/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						"services",
+						"deletetask",
+						"4",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getalltaskbyprojectname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9182/services/getAllTasksByProject/project1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9182",
+					"path": [
+						"services",
+						"getAllTasksByProject",
+						"project1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
