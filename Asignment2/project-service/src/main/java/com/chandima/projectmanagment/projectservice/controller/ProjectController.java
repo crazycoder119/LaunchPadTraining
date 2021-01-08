@@ -17,7 +17,9 @@ public class ProjectController {
 
     @Autowired
     ProjectService projectService;
-
+    /**
+     * Give user option to see tasks in a particuler project
+     */
     @RequestMapping(value = "/getalltasksfromprojectName/{projectId}", method = RequestMethod.GET)
     public ResponseEntity<Object[]>   getTasksByProjectId(@PathVariable int projectId){
         String baseURL = "http://localhost:9182/services/getAllTasksByProject/"+projectId;
@@ -29,8 +31,11 @@ public class ProjectController {
         return ResponseEntity.ok().body(objects);
     }
 
+    /**
+     * Implement to send the project object for service calls
+     */
     @RequestMapping(value = "/projectvalidate/{id}", method = RequestMethod.GET)
-    public Project getProjectByIdTaskService(@PathVariable int id){
+    public Project getProjectByPROJECTiD(@PathVariable int id){
         return projectService.getProjectById(id);
     }
 

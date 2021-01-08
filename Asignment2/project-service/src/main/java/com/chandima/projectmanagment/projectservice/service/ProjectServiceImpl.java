@@ -13,6 +13,9 @@ public class ProjectServiceImpl implements ProjectService {
     @Autowired
     ProjectRepository projectRepository;
 
+    /**
+     * implemented to avoid null columns when update user can only give the update columns
+     */
     @Override
     public Project updateProjectById(int id, Project project) {
         Project existingProject = getProjectById(id);

@@ -1,7 +1,7 @@
 package com.chandima.projectmanagment.taskservice.service;
 
 import com.chandima.projectmanagement.commons.model.Task;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 
