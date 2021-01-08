@@ -16,6 +16,11 @@ public class ProjectController {
     @Autowired
     ProjectService projectService;
 
+    @RequestMapping(value = "/projectvalidate/{id}", method = RequestMethod.GET)
+    public Project getProjectByIdTaskService(@PathVariable int id){
+        return projectService.getProjectById(id);
+    }
+
     @RequestMapping(value = "/projects", method = RequestMethod.GET)
     public ResponseEntity<List<Project>> getAllProjects(){
         return ResponseEntity.ok().body(projectService.getAllProjects());

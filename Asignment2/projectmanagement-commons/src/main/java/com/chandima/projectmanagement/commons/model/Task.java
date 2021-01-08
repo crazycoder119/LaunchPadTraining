@@ -13,8 +13,16 @@ public class Task {
      int id;
 
     String taskName;
-
+    int projectId;
     String projectName;
+
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
+    }
 
     Date asignedDate;
     Date completedDate;
