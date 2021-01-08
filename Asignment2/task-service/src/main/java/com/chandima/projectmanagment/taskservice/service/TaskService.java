@@ -1,6 +1,6 @@
 package com.chandima.projectmanagment.taskservice.service;
 
-import com.chandima.projectmanagement.commons.model.Task;
+import com.chandima.projectmanagement.commons.model.task.Task;
 
 
 import java.util.List;

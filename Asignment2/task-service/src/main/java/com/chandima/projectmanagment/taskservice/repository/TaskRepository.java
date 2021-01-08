@@ -1,6 +1,6 @@
 package com.chandima.projectmanagment.taskservice.repository;
 
-import com.chandima.projectmanagement.commons.model.Task;
+import com.chandima.projectmanagement.commons.model.task.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

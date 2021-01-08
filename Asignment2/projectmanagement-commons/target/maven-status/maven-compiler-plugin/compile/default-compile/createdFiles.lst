@@ -1,2 +1,2 @@
-com\chandima\projectmanagement\commons\model\Task.class
-com\chandima\projectmanagement\commons\model\Project.class
+com\chandima\projectmanagement\commons\model\project\Project.class
+com\chandima\projectmanagement\commons\model\task\Task.class

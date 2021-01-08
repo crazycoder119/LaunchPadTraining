@@ -1,6 +1,6 @@
 package com.chandima.projectmanagment.projectservice.service;
 
-import com.chandima.projectmanagement.commons.model.Project;
+import com.chandima.projectmanagement.commons.model.project.Project;
 
 import java.util.List;
 

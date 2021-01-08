@@ -1,6 +1,6 @@
 package com.chandima.projectmanagment.projectservice.service;
 
-import com.chandima.projectmanagement.commons.model.Project;
+import com.chandima.projectmanagement.commons.model.project.Project;
 import com.chandima.projectmanagment.projectservice.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

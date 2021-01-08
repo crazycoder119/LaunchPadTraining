@@ -1,7 +1,7 @@
 package com.chandima.projectmanagment.taskservice.controller;
 
-import com.chandima.projectmanagement.commons.model.Project;
-import com.chandima.projectmanagement.commons.model.Task;
+import com.chandima.projectmanagement.commons.model.project.Project;
+import com.chandima.projectmanagement.commons.model.task.Task;
 import com.chandima.projectmanagment.taskservice.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -65,7 +65,7 @@ public class TaskController {
     @RequestMapping(value = "/updatetask/{id}", method = RequestMethod.PUT)
     public ResponseEntity updateTaskById(@RequestBody Task task, @PathVariable int id){
         if(getProjectNameValid(task.getProjectId())!=null){
-            Task updatedTask = taskService.addTask(task);
+            Task updatedTask = taskService.updateTaskById(id, task);
             if(updatedTask==null){
                 return  ResponseEntity.status(HttpStatus.FORBIDDEN).body("There is an existing task already");
             }else{

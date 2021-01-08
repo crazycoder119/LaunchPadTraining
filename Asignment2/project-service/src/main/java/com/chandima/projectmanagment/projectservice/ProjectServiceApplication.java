@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 //@SpringBootApplication(scanBasePackages = "com.chandima.projectmanagment.projectservice.service.ProjectService")
 @SpringBootApplication
-@EntityScan(basePackages = "com.chandima.projectmanagement.commons.model")
+@EntityScan(basePackages = "com.chandima.projectmanagement.commons.model.project")
 public class ProjectServiceApplication {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.chandima.projectmanagement.commons.model;
+package com.chandima.projectmanagement.commons.model.project;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

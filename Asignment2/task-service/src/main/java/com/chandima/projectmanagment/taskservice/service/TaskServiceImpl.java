@@ -1,6 +1,6 @@
 package com.chandima.projectmanagment.taskservice.service;
 
-import com.chandima.projectmanagement.commons.model.Task;
+import com.chandima.projectmanagement.commons.model.task.Task;
 import com.chandima.projectmanagment.taskservice.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,6 +47,9 @@ public class TaskServiceImpl implements TaskService {
         if(existingTask!=null){
             if(task.getTaskName()!=null){
                 existingTask.setTaskName(task.getTaskName());
+            }
+            if(task.getProjectId()>0){
+                existingTask.setProjectId(task.getProjectId());
             }
             if(task.getProjectName()!=null){
                 existingTask.setProjectName(task.getProjectName());

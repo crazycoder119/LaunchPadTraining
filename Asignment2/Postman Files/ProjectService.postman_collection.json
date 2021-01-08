@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"id\": \"5\",\r\n\t\"projectName\": \"project3\",\r\n\t\"projectManager\":\"manager1\",\r\n\t\"startDate\":\"2020-01-01\",\r\n\t\"endDate\":\"2020-01-30\",\r\n\t\"status\":\"null\"\r\n}",
+					"raw": "{\r\n\t\"id\": \"4\",\r\n\t\"projectName\": \"project4\",\r\n\t\"projectManager\":\"manager1\",\r\n\t\"startDate\":\"2020-01-01\",\r\n\t\"endDate\":\"2020-01-30\",\r\n\t\"status\":\"null\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -99,7 +99,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:9181/services/deleteproject/7/admins",
+					"raw": "http://localhost:9181/services/deleteproject/4/admin",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -108,8 +108,8 @@
 					"path": [
 						"services",
 						"deleteproject",
-						"7",
-						"admins"
+						"4",
+						"admin"
 					]
 				}
 			},

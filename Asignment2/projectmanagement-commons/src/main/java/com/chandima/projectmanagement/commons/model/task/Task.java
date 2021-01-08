@@ -1,4 +1,4 @@
-package com.chandima.projectmanagement.commons.model;
+package com.chandima.projectmanagement.commons.model.task;
 
 
 import javax.persistence.Entity;

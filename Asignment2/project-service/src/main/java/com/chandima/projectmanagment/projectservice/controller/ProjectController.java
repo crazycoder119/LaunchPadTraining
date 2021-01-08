@@ -1,6 +1,6 @@
 package com.chandima.projectmanagment.projectservice.controller;
 
-import com.chandima.projectmanagement.commons.model.Project;
+import com.chandima.projectmanagement.commons.model.project.Project;
 import com.chandima.projectmanagment.projectservice.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
